@@ -22,17 +22,6 @@ resource "yandex_compute_instance" "platform" {
     core_fraction = var.vm_web_resources.core_fraction
 }
 
-
-#resource "yandex_compute_instance" "platform" {
-  #name        = var.vm_web_instance_name
-#name = "${ local.org }-${ local.project }-${ local.instance }-web"
- # platform_id = "standard-v1"
-  #resources {
-   # cores         = var.vm_web_cores
-    #memory        = var.vm_web_memory
-   # core_fraction = var.vm_web_core_fraction
-  #}
-
   boot_disk {
     initialize_params {
       image_id = data.yandex_compute_image.ubuntu.image_id
@@ -63,16 +52,6 @@ resource "yandex_compute_instance" "vm2" {
 }
 
 
-#resource "yandex_compute_instance" "vm2" {
-  #name        = var.vm_db_instance_name
- #  name = "${ local.org }-${ local.project }-${ local.instance }-db"
- # platform_id = "standard-v1"
-  #resources {
-   # cores         = var.vm_db_cores
-   # memory        = var.vm_db_memory
-   # core_fraction = var.vm_db_core_fraction
- # }
-
   boot_disk {
     initialize_params {
       image_id = data.yandex_compute_image.ubuntu.image_id
@@ -85,11 +64,6 @@ resource "yandex_compute_instance" "vm2" {
     subnet_id = yandex_vpc_subnet.develop.id
     nat       = true
   }
-
-  /*metadata = {
-    serial-port-enable = 1
-    ssh-keys           = "ubuntu:${var.vms_ssh_root_key}"
-  }*/
 
   
 

@@ -19,28 +19,4 @@ variable "vm_db_resources" {
   }
 }
 
-/*variable "vm_db_instance_name" {
-  type        = string
-  default     = "netology-develop-platform-db"
-  description = "name_of_instance"
-}
-
-variable "vm_db_cores" {
-  type        = number
-  default     = 2
-  description = "count_of_cores_vm"
-}
-
-variable "vm_db_memory" {
-  type        = number
-  default     = 2
-  description = "count_of_memory_vm"
-}
-
-variable "vm_db_core_fraction" {
-  type        = number
-  default     = 20
-  description = "core_fraction_of_vm"
-}*/
-
 

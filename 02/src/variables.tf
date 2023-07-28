@@ -47,41 +47,6 @@ variable "vm_web_resources" {
     core_fraction  = 5
  }
 }
-
-### yandex_compute_instance vars
-
-/*variable "vm_web_instance_name" {
-  type        = string
-  default     = "netology-develop-platform-web"
-  description = "name_of_instance"
-}
-
-variable "vm_web_cores" {
-  type        = number
-  default     = 2
-  description = "count_of_cores_vm"
-}
-
-variable "vm_web_memory" {
-  type        = number
-  default     = 1
-  description = "count_of_memory_vm"
-}
-
-variable "vm_web_core_fraction" {
-  type        = number
-  default     = 5
-  description = "core_fraction_of_vm"
-}*/
-
-###ssh vars
-
-/*variable "vms_ssh_root_key" {
-  type        = string
-  default     = "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQCwyJ3A7ejWrc8zrubKHU/QnVkCiQeREs7YqXNxpPLacXVRKBSEyC5D8nFQtUZcYCprLOKFXZqwmpUH5TVn0rONjZx1R1cvO9sa3lDm6DrpbIVQqGDYCJ+GerAtzYYDnL51z+daKrT9cqa2LdvTzEWfDyB7+gujFiJrGLnFA1pJeN1x6jHj/V7hXm0y88uW/G6AZWnGfvgJzUj5B7AMdRBjR3YGDTbnjcgnHLCNoO4nefHqMBiEZ7FibNqi1GqSi243GtBVNq8BMlHZyWucPG7IeUBHZ93gf9eLbN5nGx2E4TGZIcKjSH9QYptgXEi19HDE4wqYCexCNBTuwSN2YHWBD6B3MEnwKA2R1GtNM/rH69+puXZJx3p/qidSmQwQvdsVze4uJf4v+UEJvGbg06ce9VFjfoaiLFNLNKIVP1xqrZTHtWQeX9mqYZ3KrmNvzO843Eb9nqn5fyGDjkK600bAeg6tlB+jkFNu9PY28NLiasCfnRovBtvUm2esKqWQ/BE= skvorchenkov@localhost.localdomain"
-  description = "ssh-keygen -t ed25519"
-}*/
-
 variable "vms_ssh_root_key" {
   type = map(any)
   default = {
