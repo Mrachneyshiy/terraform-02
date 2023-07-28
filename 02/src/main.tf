@@ -32,6 +32,7 @@ resource "yandex_compute_instance" "platform" {
     #memory        = var.vm_web_memory
    # core_fraction = var.vm_web_core_fraction
   #}
+
   boot_disk {
     initialize_params {
       image_id = data.yandex_compute_image.ubuntu.image_id
@@ -71,6 +72,7 @@ resource "yandex_compute_instance" "vm2" {
    # memory        = var.vm_db_memory
    # core_fraction = var.vm_db_core_fraction
  # }
+
   boot_disk {
     initialize_params {
       image_id = data.yandex_compute_image.ubuntu.image_id
