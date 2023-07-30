@@ -52,7 +52,6 @@ yandex_compute_instance.platform: Creating...
 
 ------
 
-
 <details>
 <summary>Вывод консоли 2:</summary>
 
@@ -66,13 +65,16 @@ yandex_compute_instance.platform: Creating...
 │   15: resource "yandex_compute_instance" "platform" {
 │ 
 ╵
-```
+```   
 </details>
+
+------
 
 1. В первом выводе консоли в main.tf была указана ошибка в написании standart-v4. Исправил на starndard-v1. Во втором выводе консоли указана ошибка с 1 ядром. Чтобы создать ВМ на Yandex Cloud необходимо иметь 2 ядра.
 Исправленный кусочек кода в main.tf
 <details>
 <summary>Вывод консоли 2:</summary>
+
 ```sh
 resource "yandex_compute_instance" "platform" {
   name        = "netology-develop-platform-web"
@@ -82,8 +84,10 @@ resource "yandex_compute_instance" "platform" {
     memory        = 1
     core_fraction = 5
   }
-  ```
+```   
 </details>
+
+------
 
 2. Ответы:
 - preemptible = true создание ВМ с прерыванием. Она работает 24 часов и может быть остановлена Compute Cloud в любой момент. Может пригодиться если забыли удалить ресурсы на Yandex Cloud. Чтобы денги не тратились. 
