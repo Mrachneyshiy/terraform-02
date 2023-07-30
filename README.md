@@ -170,6 +170,7 @@ variable "vms_ssh_root_key" {
 </details>
 
 Скриншот:
+
 ![](pic/3.png) 
 
 ## Задача 3
@@ -177,7 +178,53 @@ variable "vms_ssh_root_key" {
 2. Скопируйте блок ресурса и создайте с его помощью вторую ВМ(в файле main.tf): **"netology-develop-platform-db"** ,  cores  = 2, memory = 2, core_fraction = 20. Объявите ее переменные с префиксом **vm_db_** в том же файле('vms_platform.tf').
 3. Примените изменения.
 
+
+
 ## Ответ:
+
+<details>
+<summary>Код из vms_platform.tf:</summary>
+
+```sh
+### yandex_compute_image vars
+
+variable "vm_db_image_name" {
+  type        = string
+  default     = "ubuntu-2004-lts"
+  description = "release_name_of_image"
+}
+
+### yandex_compute_instance vars
+
+
+variable "vm_db_instance_name" {
+  type        = string
+  default     = "netology-develop-platform-db"
+  description = "name_of_instance"
+}
+
+variable "vm_db_cores" {
+  type        = number
+  default     = 2
+  description = "count_of_cores_vm"
+}
+
+variable "vm_db_memory" {
+  type        = number
+  default     = 2
+  description = "count_of_memory_vm"
+}
+
+variable "vm_db_core_fraction" {
+  type        = number
+  default     = 20
+  description = "core_fraction_of_vm"
+}
+```   
+</details>
+
+Скриншот:
+
 ![](pic/4.png) 
 
 ## Задача 4
@@ -187,6 +234,26 @@ variable "vms_ssh_root_key" {
 В качестве решения приложите вывод значений ip-адресов команды ```terraform output```
 
 ## Ответ:
+Файл [outputs.tf](02/src/outputs.tf)
+
+Скриншот:
+
 ![](pic/5.png)
 
-# Остальное все в коде проекта.
+## Задача 5
+
+1. В файле locals.tf опишите в **одном** local-блоке имя каждой ВМ, используйте интерполяцию ${..} с несколькими переменными по примеру из лекции.
+2. Замените переменные с именами ВМ из файла variables.tf на созданные вами local переменные.
+3. Примените изменения.
+
+## Ответ:
+Файл [locals.tf](02/src/locals.tf)
+
+## Задача 6
+
+1. Вместо использования 3-х переменных  ".._cores",".._memory",".._core_fraction" в блоке  resources {...}, объедените их в переменные типа **map** с именами "vm_web_resources" и "vm_db_resources". В качестве продвинутой практики попробуйте создать одну map переменную **vms_resources** и уже внутри нее конфиги обеих ВМ(вложенный map).
+2. Так же поступите с блоком **metadata {serial-port-enable, ssh-keys}**, эта переменная должна быть общая для всех ваших ВМ.
+3. Найдите и удалите все более не используемые переменные проекта.
+4. Проверьте terraform plan (изменений быть не должно).
+
+------
