@@ -50,8 +50,6 @@ yandex_compute_instance.platform: Creating...
 ```   
 </details>
 
-------
-
 <details>
 <summary>Вывод консоли 2:</summary>
 
@@ -68,12 +66,10 @@ yandex_compute_instance.platform: Creating...
 ```   
 </details>
 
-------
-
-1. В первом выводе консоли в main.tf была указана ошибка в написании standart-v4. Исправил на starndard-v1. Во втором выводе консоли указана ошибка с 1 ядром. Чтобы создать ВМ на Yandex Cloud необходимо иметь 2 ядра.
+2. В первом выводе консоли в main.tf была указана ошибка в написании standart-v4. Исправил на starndard-v1. Во втором выводе консоли указана ошибка с 1 ядром. Чтобы создать ВМ на Yandex Cloud необходимо иметь 2 ядра.
 Исправленный кусочек кода в main.tf
 <details>
-<summary>Вывод консоли 2:</summary>
+<summary>Исправленные ошибки в main.tf:</summary>
 
 ```sh
 resource "yandex_compute_instance" "platform" {
