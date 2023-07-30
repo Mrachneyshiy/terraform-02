@@ -27,12 +27,14 @@ variable "vms_ssh_root_key" {
   default     = "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQCwyJ3A7ejWrc8zrubKHU/QnVkCiQeREs7YqXNxpPLacXVRKBSEyC5D8nFQtUZcYCprLOKFXZqwmpUH5TVn0rONjZx1R1cvO9sa3lDm6DrpbIVQqGDYCJ+GerAtzYYDnL51z+daKrT9cqa2LdvTzEWfDyB7+gujFiJrGLnFA1pJeN1x6jHj/V7hXm0y88uW/G6AZWnGfvgJzUj5B7AMdRBjR3YGDTbnjcgnHLCNoO4nefHqMBiEZ7FibNqi1GqSi243GtBVNq8BMlHZyWucPG7IeUBHZ93gf9eLbN5nGx2E4TGZIcKjSH9QYptgXEi19HDE4wqYCexCNBTuwSN2YHWBD6B3MEnwKA2R1GtNM/rH69+puXZJx3p/qidSmQwQvdsVze4uJf4v+UEJvGbg06ce9VFjfoaiLFNLNKIVP1xqrZTHtWQeX9mqYZ3KrmNvzO843Eb9nqn5fyGDjkK600bAeg6tlB+jkFNu9PY28NLiasCfnRovBtvUm2esKqWQ/BE= skvorchenkov@localhost.localdomain"
   description = "ssh-keygen -t ed25519"
 }
-...
-
+```   
 </details>
+
+------
 
 <details>
 <summary>Вывод консоли 1:</summary>
+
 ```sh
 yandex_vpc_network.develop: Creating...
 yandex_vpc_network.develop: Creation complete after 4s [id=enpk9ro8q59lbmjlf967]
@@ -45,11 +47,15 @@ yandex_compute_instance.platform: Creating...
 │   with yandex_compute_instance.platform,
 │   on main.tf line 15, in resource "yandex_compute_instance" "platform":
 │   15: resource "yandex_compute_instance" "platform" {
-```
+```   
 </details>
+
+------
+
 
 <details>
 <summary>Вывод консоли 2:</summary>
+
 ```sh
 yandex_compute_instance.platform: Creating...
 ╷
