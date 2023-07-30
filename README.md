@@ -19,6 +19,7 @@
 
 <details>
 <summary>Часть кода в variables.tf:</summary>
+
 ```sh
 ###ssh vars
 variable "vms_ssh_root_key" {
