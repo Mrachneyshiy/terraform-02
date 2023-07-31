@@ -33,7 +33,7 @@ variable "vms_ssh_root_key" {
 ------
 
 <details>
-<summary>Вывод консоли 1:</summary>
+#<summary>Вывод консоли 1:</summary>
 
 ```sh
 yandex_vpc_network.develop: Creating...
