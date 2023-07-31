@@ -248,6 +248,31 @@ variable "vm_db_core_fraction" {
 
 ## Ответ:
 Файл [locals.tf](02/src/locals.tf)
+Решил сделать чуть подругому и описал интерполяцию в файле main.tf.
+
+<details>
+<summary>Код из vms_platform.tf:</summary>
+
+```sh
+resource "yandex_compute_instance" "platform" {
+name = "${ local.org }-${ local.project }-${ local.instance }-web"
+  platform_id = "standard-v1"
+  resources {
+    cores         = var.vm_web_cores
+    memory        = var.vm_web_memory
+    core_fraction = var.vm_web_core_fraction
+  }
+------
+resource "yandex_compute_instance" "vm2" {
+   name = "${ local.org }-${ local.project }-${ local.instance }-db"
+  platform_id = "standard-v1"
+  resources {
+    cores         = var.vm_db_cores
+    memory        = var.vm_db_memory
+    core_fraction = var.vm_db_core_fraction
+  }
+```   
+</details>
 
 ## Задача 6
 
