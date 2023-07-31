@@ -32,7 +32,7 @@ variable "vms_ssh_root_key" {
 
 ------
 
-- <details>
+<details>
 <summary>Вывод консоли 1:</summary>
 
 ```sh
@@ -247,7 +247,7 @@ variable "vm_db_core_fraction" {
 3. Примените изменения.
 
 ## Ответ:
-Файл [locals.tf](02/src/locals.tf)
+- [locals.tf](02/src/locals.tf)
 
 Описал интерполяцию в файле main.tf.
 
@@ -286,6 +286,6 @@ resource "yandex_compute_instance" "vm2" {
 
 Описал map ВМ в файлах variables.tf и vms_platform.tf. Описал map с metadata в файле varibles.tf. 
 
-Файл [main.tf](02/src/main.tf)
-Файл [variables.tf](02/src/variables.tf)
-Файл [vms_platform.tf](02/src/vms_platform.tf)
+- [main.tf](02/src/main.tf)
+- [variables.tf](02/src/variables.tf)
+- [vms_platform.tf](02/src/vms_platform.tf)
