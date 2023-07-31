@@ -248,10 +248,11 @@ variable "vm_db_core_fraction" {
 
 ## Ответ:
 Файл [locals.tf](02/src/locals.tf)
-Решил сделать чуть подругому и описал интерполяцию в файле main.tf.
+
+Описал интерполяцию в файле main.tf.
 
 <details>
-<summary>Код из vms_platform.tf:</summary>
+<summary>Код из main.tf:</summary>
 
 ```sh
 resource "yandex_compute_instance" "platform" {
@@ -281,4 +282,11 @@ resource "yandex_compute_instance" "vm2" {
 3. Найдите и удалите все более не используемые переменные проекта.
 4. Проверьте terraform plan (изменений быть не должно).
 
+## Ответ:
+
+Описал map ВМ в файлах variables.tf и vms_platform.tf. Описал map с metadata в файле varibles.tf. 
+
+Файл [main.tf](02/src/main.tf)
+Файл [variables.tf](02/src/variables.tf)
+Файл [vms_platform.tf](02/src/vms_platform.tf)
 ------
