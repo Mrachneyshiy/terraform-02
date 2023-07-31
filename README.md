@@ -234,7 +234,7 @@ variable "vm_db_core_fraction" {
 В качестве решения приложите вывод значений ip-адресов команды ```terraform output```
 
 ## Ответ:
-Файл [outputs.tf](02/src/outputs.tf)
+- [outputs.tf](02/src/outputs.tf)
 
 Скриншот:
 
