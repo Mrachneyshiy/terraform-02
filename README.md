@@ -289,4 +289,3 @@ resource "yandex_compute_instance" "vm2" {
 Файл [main.tf](02/src/main.tf)
 Файл [variables.tf](02/src/variables.tf)
 Файл [vms_platform.tf](02/src/vms_platform.tf)
-------
